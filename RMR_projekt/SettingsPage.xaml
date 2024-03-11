@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMR_projekt.SettingsPage"
+             Title="SettingsPage"
+              >
+
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="pink.jpg" />
+    </ContentPage.BackgroundImageSource>
+
+    <ScrollView>
+        <StackLayout>
+            <!--<StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                <Button x:Name="BackBtn" Text="Back" FontSize="20" Clicked="BackButton_Clicked" />
+            </StackLayout>-->
+
+            <StackLayout  Padding="10"  VerticalOptions="Start"  HorizontalOptions="Start">
+                   <Button x:Name="Backbtn"   HeightRequest="60" WidthRequest="60" Background="Transparent" BackgroundColor="Transparent"  Clicked="BackButton_Clicked"></Button>
+            </StackLayout>
+                    
+               
+
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Spacing="10">
+                <!-- Language Label -->
+                <Label x:Name="SelectLanguageLabel" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">Select language</Label>
+
+                <!-- Language Buttons -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Spacing="10">
+                    <Button Text="🇸🇮" Clicked="SL_Button_Clicked" BackgroundColor="Transparent" TextColor="Black" />
+                    <Button Text="🇬🇧" Clicked="GB_Button_Clicked" BackgroundColor="Transparent" TextColor="Black" />
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout>
+                <!-- Light Mode Slider -->
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label x:Name="LightModeText" Text="Light mode" VerticalOptions="Center" />
+                    <Switch x:Name="lightModeSwitch" IsToggled="{Binding LightModeEnabled}" />
+                </StackLayout>
+
+                <!-- Dark Mode Slider -->
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label x:Name="DarkModeText" Text="Dark mode" VerticalOptions="Center" />
+                    <Switch x:Name="darkModeSwitch" IsToggled="{Binding DarkModeEnabled}" />
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Button x:Name="SaveBtn" Text="Save" Clicked="Save_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

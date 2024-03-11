@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMR_projekt.SetPage"
+             Title="SetPage">
+    <ScrollView>
+        <StackLayout>
+            <!-- Set Number -->
+            <Label Text="Set 1" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+
+            <!-- Timer -->
+            <Label x:Name="TimerLabel" Text="00:00:00" FontSize="30" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+
+            <!-- Volume Slider -->
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Label  Text="Volume" FontSize="30" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                <Slider x:Name="VolumeSlider" Maximum="100" Value="50" WidthRequest="200" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+
+            </StackLayout>
+            
+            <!-- Stop and End Buttons -->
+            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Button Text="Stop" Command="{Binding StopCommand}" />
+                <Button Text="End" Command="{Binding EndCommand}" />
+            </StackLayout>
+            
+            
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

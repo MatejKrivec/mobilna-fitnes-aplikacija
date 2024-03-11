@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "NQlLyvwKaBZmn7QZ3N0iqUGwBQ5/kNcospBsGqo+YAc=",
+  "Source": "IntervalTimerWebApi",
+  "BasePath": "_content/IntervalTimerWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,113 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net7.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = RMR_projekt
+build_property.ProjectDir = C:\Users\Matej\Desktop\RMR_projekt\RMR_projekt\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/FizioloskiP.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.FizioloskiP.xaml
+build_metadata.AdditionalFiles.TargetPath = FizioloskiP.xaml
+build_metadata.AdditionalFiles.RelativePath = FizioloskiP.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/KonecPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.KonecPage.xaml
+build_metadata.AdditionalFiles.TargetPath = KonecPage.xaml
+build_metadata.AdditionalFiles.RelativePath = KonecPage.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = LoginPage.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/NewPage2.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.NewPage2.xaml
+build_metadata.AdditionalFiles.TargetPath = NewPage2.xaml
+build_metadata.AdditionalFiles.RelativePath = NewPage2.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = RegisterPage.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/SetPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.SetPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SetPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SetPage.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SettingsPage.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/StatistikePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.StatistikePage.xaml
+build_metadata.AdditionalFiles.TargetPath = StatistikePage.xaml
+build_metadata.AdditionalFiles.RelativePath = StatistikePage.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/TimerPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.TimerPage.xaml
+build_metadata.AdditionalFiles.TargetPath = TimerPage.xaml
+build_metadata.AdditionalFiles.RelativePath = TimerPage.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/TreningPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.TreningPage.xaml
+build_metadata.AdditionalFiles.TargetPath = TreningPage.xaml
+build_metadata.AdditionalFiles.RelativePath = TreningPage.xaml
+
+[C:/Users/Matej/Desktop/RMR_projekt/RMR_projekt/ZgodovinaPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RMR_projekt.ZgodovinaPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ZgodovinaPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ZgodovinaPage.xaml

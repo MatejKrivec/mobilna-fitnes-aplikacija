@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sliders="clr-namespace:Syncfusion.Maui.Sliders;assembly=Syncfusion.Maui.Sliders"
+             x:Class="RMR_projekt.NewPage2"
+             BackgroundColor="#F5F5F5">
+
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="pink.jpg" />
+    </ContentPage.BackgroundImageSource>
+
+    <Grid x:Name="exerciseGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="180" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="65" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+
+        <BoxView Grid.Row="0"
+                Color="Transparent" />
+        <StackLayout>
+
+            <Picker x:Name="WorkoutPicker"
+                     Title="Menu" SelectedIndexChanged="WorkoutPicker_SelectedIndexChanged"
+                     >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Statistika</x:String>
+                        <x:String>Zgodovina</x:String>
+                        <x:String>Settings</x:String>
+                        <x:String>Fizioloski podatki</x:String>
+                        <x:String>--------</x:String>
+                        <x:String>Logout</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </StackLayout>
+        <StackLayout Margin="40" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0">
+            
+            <Label x:Name="timeLabel" Text="00:00" FontSize="20" HorizontalOptions="Center" VerticalOptions="Start" Margin="0,10,0,0"/>
+            <Label x:Name="TotalCalories" Text="Total calories:" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,10,0,0"/>
+
+            <Button Margin="10" x:Name="AddExerciceBtn" Text="Add Exercise"  Clicked="OnAddExerciseClicked" />
+            
+        </StackLayout>
+        <CollectionView x:Name="exerciseCollectionView"
+                    Grid.Row="1"
+                    VerticalOptions="FillAndExpand"
+                     ItemsSource="{Binding exerciseItems}">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <!-- Customize the item template based on your needs -->
+                    <Frame BorderColor="Black" BackgroundColor="Transparent" CornerRadius="10" Margin="10">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Name}" FontSize="18" Grid.Row="0" Grid.ColumnSpan="3" Margin="0,0,0,10"/>
+
+                            <Label Text="X" FontSize="18" TextColor="Red" HorizontalOptions="End" VerticalOptions="End" Margin="0,0,0,10" Grid.Column="3">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnDeleteWorkoutTapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <!-- Work Frame -->
+                            <Frame x:Name="WorkFrame" BackgroundColor="LightBlue"  CornerRadius="10" Margin="0,15,5,15" Grid.Row="1" Grid.Column="0">
+                                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <Label x:Name="WorkLabel"  Text="{Binding WorkLabel}" FontSize="12" />
+                                    <Label Text="{Binding WorkDuration, StringFormat='{0:mm\\:ss}'}" FontSize="12" />
+                                </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnWorkFrameTapped"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+
+                            <!-- Rest Frame -->
+                            <Frame x:Name="RestFrame" BackgroundColor="LightBlue"  CornerRadius="10" Margin="0,15,0,15" Grid.Row="1" Grid.Column="1">
+                                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <Label x:Name="RestLabel" Text="Rest: " FontSize="12" />
+                                    <Label Text="{Binding RestDuration, StringFormat='{0:mm\\:ss}'}" FontSize="12" />
+                                </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnRestFrameTapped"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+
+                            <!-- Sets Frame -->
+                            <Frame x:Name="SetsFrame" BackgroundColor="LightBlue"  CornerRadius="10" Margin="5,15,0,15" Grid.Row="1" Grid.Column="2">
+                                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <Label x:Name="SetLabel" Text="Sets: " FontSize="12" />
+                                    <Label Text="{Binding Sets}" FontSize="12" />
+                                </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnSetsFrameTapped"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+
+        <!-- Button to add new exercise item -->
+        <!-- <Button Text="Start" Grid.Row="3" Clicked="OnStartButtonClicked" /> -->
+        
+        <Frame Margin="20,0,20,10" x:Name="StartFrame" Padding="0,10,0,10"  Grid.Row="3">
+            <Label x:Name="StartLabel" Text="Start" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnStartFrameTapped"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        
+        <!--work-->
+        <sliders:SfSlider x:Name="workSlider"
+                               Orientation="Vertical"
+                               Minimum="5"
+                               Maximum="300"
+                               ShowTicks="True"
+                               IsVisible="false"
+                               Grid.Row="0"
+                               Grid.RowSpan="2"
+                               Background="AliceBlue"
+                               Interval="25"
+                               StepSize="5"
+                               ShowLabels="True"
+                               Margin="0,70,0,0"
+                               ValueChanged="OnWorkSliderValueChanged"
+                              />
+
+        <Label x:Name="workLabel" Grid.Row="0" HorizontalOptions="Fill" FontSize="20" Text="00:00"  IsVisible="false" Margin="0,0,0,110" VerticalOptions="Fill" Background="AliceBlue" Padding="165,45,20,0"/>
+        <Label x:Name="workLabel2" Text="Work"  Padding="165,10,20,0" FontSize="20" IsVisible="false" />
+        <Button x:Name="workBtn" Grid.Row="2" IsVisible="false" Text="Apply Changes" Clicked="OnWorkSliderClicked" />
+        <!--rest-->
+        <sliders:SfSlider x:Name="restSlider"
+                       Orientation="Vertical"
+                       Minimum="5"
+                       Maximum="300"
+                       ShowTicks="True"
+                       IsVisible="false"
+                       Grid.Row="0"
+                       Grid.RowSpan="2"
+                       Background="AliceBlue"
+                       Interval="25"
+                       StepSize="5"
+                       ShowLabels="True"
+                       Margin="0,70,0,0"
+                       ValueChanged="OnRestSliderValueChanged"
+                      />
+
+        <Label x:Name="restLabel" Grid.Row="0" HorizontalOptions="Fill" FontSize="20" Text="00:00"  IsVisible="false" Margin="0,0,0,110" VerticalOptions="Fill" Background="AliceBlue" Padding="165,45,20,0"/>
+        <Label x:Name="restLabel2" Text="Rest"  Padding="165,10,20,0" FontSize="20" IsVisible="false" />
+        <Button x:Name="restBtn" Grid.Row="2" IsVisible="false" Text="Apply Changes" Clicked="OnRestSliderClicked" />
+        <!--sets-->
+        <sliders:SfSlider x:Name="setSlider"
+               Orientation="Vertical"
+               Minimum="1"
+               Maximum="6"
+               ShowTicks="True"
+               IsVisible="false"
+               Grid.Row="0"
+               Grid.RowSpan="2"
+               Background="AliceBlue"
+               Interval="1"
+               StepSize="1"
+               ShowLabels="True"
+               Margin="0,70,0,0"
+               ValueChanged="OnSetSliderValueChanged"
+              />
+
+        <Label x:Name="setLabel" Grid.Row="0" HorizontalOptions="Fill" FontSize="20" Text="00:00"  IsVisible="false" Margin="0,0,0,110" VerticalOptions="Fill" Background="AliceBlue" Padding="195,45,30,0"/>
+        <Label x:Name="setLabel2" Text="Sets"  Padding="185,10,20,0" FontSize="20" IsVisible="false" />
+        <Button x:Name="setBtn" Grid.Row="2" IsVisible="false" Text="Apply Changes" Clicked="OnSetSliderClicked" />
+
+        <CollectionView x:Name="workoutListView" Grid.Row="0" Grid.RowSpan="3" BackgroundColor="AliceBlue" IsVisible="false">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame x:Name="Frame" Padding="10" Margin="5" BackgroundColor="LightGray" CornerRadius="5" >
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding ImagePath}" WidthRequest="50" HeightRequest="50" />
+                            <Label Text="{Binding Name}" VerticalOptions="CenterAndExpand" FontAttributes="Bold" Padding="10"/>
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnWorkoutTapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+
+</ContentPage>

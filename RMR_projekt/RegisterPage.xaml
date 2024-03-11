@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMR_projekt.RegisterPage"
+             Title="RegisterPage">
+
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="pink.jpg" />
+    </ContentPage.BackgroundImageSource>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <StackLayout HorizontalOptions="Start">
+                <Button x:Name="Backbtn"   HeightRequest="60" WidthRequest="60" Background="Transparent" BackgroundColor="Transparent"  Clicked="BackButton_Clicked"></Button>
+            </StackLayout>
+            
+            <Entry x:Name="FirstNameEntry" Placeholder="Ime" PlaceholderColor="Black"/>
+            <Entry x:Name="LastNameEntry" Placeholder="Priimek" PlaceholderColor="Black"/>
+            <Entry x:Name="UsernameEntry" Placeholder="Uporabniško ime" PlaceholderColor="Black"/>
+            <Entry x:Name="EmailEntry" Placeholder="Email" PlaceholderColor="Black"/>
+            <Entry x:Name="PasswordEntry" Placeholder="Geslo" IsPassword="True" PlaceholderColor="Black"/>
+            <Entry x:Name="ConfirmPasswordEntry" Placeholder="Potrdi geslo" IsPassword="True" PlaceholderColor="Black"/>
+
+            <Button x:Name="RegistrationButton" Text="Registracija" Clicked="RegistrationButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

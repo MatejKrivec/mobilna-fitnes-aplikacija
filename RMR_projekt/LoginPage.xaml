@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMR_projekt.LoginPage"
+             Title="LoginPage">
+
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="pink.jpg" />
+    </ContentPage.BackgroundImageSource>
+
+    <!-- <ContentPage.MenuBarItems>
+        <MenuBarItem Text="File">
+            <MenuFlyoutItem Text="Exit" />
+        </MenuBarItem>
+        <MenuBarItem Text="Locations">
+            <MenuFlyoutSubItem Text="Change Location">
+                <MenuFlyoutItem Text="Redmond, USA"/>
+                <MenuFlyoutItem Text="London, UK"/>
+                <MenuFlyoutItem Text="Berlin, DE"/>
+            </MenuFlyoutSubItem>
+            <MenuFlyoutSeparator />
+            <MenuFlyoutItem Text="Add Location"/>
+            <MenuFlyoutItem Text="Edit Location"/>
+            <MenuFlyoutItem Text="Remove Location"/>
+        </MenuBarItem>
+        <MenuBarItem Text="View">
+            <MenuFlyoutItem Text="Refresh"/>
+            <MenuFlyoutItem Text="Change Theme"/>
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>-->
+
+    <!--<ContentPage.MenuBarItems>
+        <MenuBarItem Text="File">
+
+            <MenuFlyoutSubItem Text="New">
+                <MenuFlyoutItem
+                    x:Name="MenuItemNew"
+                    Text="New project">
+                </MenuFlyoutItem>
+
+                <MenuFlyoutItem Text="New file" />
+                <MenuFlyoutItem Text="New class" />
+                <MenuFlyoutItem Text="New new" />
+            </MenuFlyoutSubItem>
+            <MenuFlyoutItem Text="Open" />
+
+            <MenuFlyoutSeparator />
+            <MenuFlyoutItem Text="Save" />
+            <MenuFlyoutItem Text="Save as" />
+            <MenuFlyoutSeparator />
+            <MenuFlyoutItem Text="Exit" />
+
+        </MenuBarItem>
+        <MenuBarItem Text="Edit">
+            <MenuFlyoutItem Text="Favorite">
+            </MenuFlyoutItem>
+            <MenuFlyoutSeparator />
+            <MenuFlyoutItem Text="Delete" />
+
+            <MenuFlyoutSeparator />
+            <MenuFlyoutSubItem Text="Options">
+                <MenuFlyoutItem Text="Option 1" />
+                <MenuFlyoutItem Text="Option 2" />
+                <MenuFlyoutItem Text="Option 3" />
+                <MenuFlyoutItem Text="Option 4" />
+
+            </MenuFlyoutSubItem>
+        </MenuBarItem>
+        <MenuBarItem Text="Window" />
+        <MenuBarItem Text="Help" />
+    </ContentPage.MenuBarItems>-->
+
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <!--<ListView BackgroundColor="Beige" x:Name="myListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="item1" />
+                            </ViewCell.ContextActions>
+                            <Label Text="gfdgdfgdg" />
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->  
+            <StackLayout HorizontalOptions="Start">
+                <Button x:Name="Backbtn"   HeightRequest="60" WidthRequest="60" Background="Transparent" BackgroundColor="Transparent"  Clicked="BackButton_Clicked"></Button>
+            </StackLayout>
+            <Entry x:Name="emailEntry" Placeholder="Email" PlaceholderColor="Black"/>
+            <Entry x:Name="passwordEntry" Placeholder="Geslo" PlaceholderColor="Black" IsPassword="True" />
+            <Button x:Name="PrijavaBtn" Text="Prijava" Clicked="Login_Clicked" />
+            <Label x:Name="RegLabel" Text="Registracija" TextDecorations="Underline" TextColor="Blue" HorizontalOptions="Center" Margin="0,20,0,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding RegistracijaBtn}" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
+<!--<FlyoutPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="RMR_projekt.LoginPage">
+
+    <FlyoutPage.Flyout>
+        <ContentPage Title="Menu">
+            <StackLayout Padding="20">
+                <Button Text="Home" Clicked="OnHomeClicked" />
+                <Button Text="Settings" Clicked="OnSettingsClicked" />
+                <Button Text="Profile" Clicked="OnProfileClicked" />
+                <Button Text="Logout" Clicked="OnLogoutClicked" />
+            </StackLayout>
+        </ContentPage>
+    </FlyoutPage.Flyout>
+
+    <FlyoutPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+               <ContentPage Title="LoginPage">
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="pink.jpg" />
+    </ContentPage.BackgroundImageSource>
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <StackLayout HorizontalOptions="Start">
+                <Button x:Name="Backbtn"  HeightRequest="50" WidthRequest="60" Text="Back" Clicked="BackButton_Clicked"></Button>
+            </StackLayout>
+            <Entry x:Name="email" Placeholder="Email" Text="{Binding email}" />
+            <Entry x:Name="password" Placeholder="Geslo" Text="{Binding geslo}" IsPassword="True" />
+            <Button x:Name="PrijavaBtn" Text="Prijava" Clicked="Login_Clicked" />
+            <Label x:Name="RegLabel" Text="Registracija" TextDecorations="Underline" TextColor="Blue" HorizontalOptions="Center" Margin="0,20,0,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding RegistracijaBtn}" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </FlyoutPage.Detail>
+
+    
+    
+</FlyoutPage>-->
+    
+    
+    
+    <!--<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       x:Class="RMR_projekt.LoginPage">
+
+    <FlyoutItem Title="Login">
+        <ShellContent Title="aaa">
+           
+        </ShellContent>
+        <ShellContent Title="aaa">
+
+        </ShellContent>
+        <ShellContent Title="aaa">
+
+        </ShellContent>
+    </FlyoutItem>
+
+</Shell>-->

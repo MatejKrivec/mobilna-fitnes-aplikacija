@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMR_projekt.TreningPage"
+             Title="TreningPage">
+    <ScrollView>
+        <StackLayout>
+
+            <StackLayout>
+                <!-- Left Upper Corner: Zgodovina and Statistika Buttons -->
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Button Text="Zgodovina" Clicked="Zgodovina_Clicked" />
+                    <Button Text="Statistika" Clicked="Statistika_Clicked_1" />
+                    <Button Text="Settings" Clicked="Settings_Clicked_2" HorizontalOptions="EndAndExpand" />
+                </StackLayout>
+
+                
+
+            </StackLayout>
+            
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="15" Padding="20">
+                <!-- Treningi Drop Down Menu -->
+                <Picker Title="Treningi" ItemsSource="{Binding TreningiItems}" SelectedItem="{Binding SelectedTrening}">
+                    <Picker.Margin>
+                        <OnPlatform x:TypeArguments="Thickness"/>
+                    </Picker.Margin>
+                </Picker>
+
+                <!-- Sections for Sets, Time, and Rest -->
+                <StackLayout Orientation="Vertical" Spacing="10">
+                    <!-- Sets Section -->
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="FillAndExpand">
+                        <Button Text="-" Command="{Binding DecreaseSetsCommand}" HorizontalOptions="Start" />
+                        <Label Text="00:00:00" FontSize="30" HorizontalOptions="CenterAndExpand" />
+                        <Button Text="+" Command="{Binding IncreaseSetsCommand}" HorizontalOptions="End" />
+                    </StackLayout>
+
+                    <!-- Time Section -->
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="FillAndExpand">
+                        <Button Text="-" Command="{Binding DecreaseTimeCommand}" HorizontalOptions="Start" />
+                        <Label Text="00:00:00" FontSize="30" HorizontalOptions="CenterAndExpand" />
+                        <Button Text="+" Command="{Binding IncreaseTimeCommand}" HorizontalOptions="End" />
+                    </StackLayout>
+
+                    <!-- Rest Section -->
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="FillAndExpand">
+                        <Button Text="-" Command="{Binding DecreaseRestCommand}" HorizontalOptions="Start" />
+                        <Label Text="00:00:00" FontSize="30" HorizontalOptions="CenterAndExpand" />
+                        <Button Text="+" Command="{Binding IncreaseRestCommand}" HorizontalOptions="End" />
+                    </StackLayout>
+                </StackLayout>
+                
+                <!-- Frame around the Additional Label -->
+                <Frame BorderColor="Gray" CornerRadius="5" Padding="10">
+                    <Label Text="Tukaj so podatki treninga kalorije itd.." HorizontalOptions="Center" />
+                </Frame>
+
+                <!-- Start Button -->
+                <Button Text="Start" Clicked="Start_Clicked"  HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

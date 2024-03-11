@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
+             x:Class="RMR_projekt.TimerPage">
+    
+       <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="topLabel" Text="Work" HorizontalOptions="Center" Grid.Row="0" Grid.ColumnSpan="3" Margin="5" FontSize="20"/>
+        <Frame x:Name="frame1" Grid.ColumnSpan="3" Margin="10,40,10,150">
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="ExerciceLabel" Text="Exercise" Grid.Column="0" HorizontalOptions="Start"/>
+                    <Label x:Name="exerciseCounterLabel" Text="1/4" Grid.Column="1" HorizontalOptions="End"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+        <Frame x:Name="frame2" Grid.Row="0" Grid.ColumnSpan="3" Margin="10,105,10,85">
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="SetsLabel" Text="Sets" Grid.Column="0" HorizontalOptions="Start"/>
+                    <Label x:Name="setsCounterLabel" Text="1/4" Grid.Column="1" HorizontalOptions="End"/>
+                </Grid>
+            </StackLayout>
+        </Frame>
+        <gauge:SfRadialGauge Grid.Row="1" Grid.ColumnSpan="3" Margin="0,-100,0,10">
+            <gauge:SfRadialGauge.Axes>
+                <gauge:RadialAxis
+                  x:Name="radialAxis"
+                  StartAngle="270"
+                  EndAngle="270"
+                  Maximum="300"
+                  ShowLabels="False"
+                  ShowTicks="False">
+                    <gauge:RadialAxis.Pointers>
+                        <gauge:RangePointer Value="{Binding Source={x:Reference pointer}, Path=Value}"
+                        EnableAnimation="True"
+                        Fill="Black" />
+                        <gauge:ShapePointer x:Name="pointer"
+                        Value="50"
+                        EnableAnimation="True"
+                        ShapeHeight="20"
+                        ShapeWidth="20"
+                        Stroke="Black"
+                        BorderWidth="3"
+                        ShapeType="Circle"
+                        Fill="White" />
+                    </gauge:RadialAxis.Pointers>
+                    <gauge:RadialAxis.Annotations>
+                        <!--<gauge:GaugeAnnotation PositionFactor="0.4"
+                           DirectionValue="30"
+                           DirectionUnit="AxisValue">
+                            <gauge:GaugeAnnotation.Content>
+                                <StackLayout>
+                                    <Label x:Name="totalTimeLabel" Text="00:00" Margin="-60,100,0,0" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"/>
+                                </StackLayout>
+                            </gauge:GaugeAnnotation.Content>
+                        </gauge:GaugeAnnotation>-->
+                        <gauge:GaugeAnnotation PositionFactor="0.1"
+                           DirectionValue="0"
+                           DirectionUnit="AxisValue">
+                            <gauge:GaugeAnnotation.Content>
+                                <Label x:Name="timer"
+                   Text="00:00"
+                   FontSize="50"
+                   TextColor="Black" />
+                            </gauge:GaugeAnnotation.Content>
+                        </gauge:GaugeAnnotation>
+                    </gauge:RadialAxis.Annotations>
+                </gauge:RadialAxis>
+            </gauge:SfRadialGauge.Axes>
+        </gauge:SfRadialGauge>
+        <Label x:Name="totalTimeLabel" Text="00:00" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20" Grid.Row="1" Grid.ColumnSpan="3"/>
+        <!--<Label x:Name="totalTimeLabel" Grid.Row="1" Grid.ColumnSpan="3" Text="Testdfadfssdffds" Margin="-60,100,0,0" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"/>-->
+        <Label x:Name="nameLabel"  HorizontalOptions="Center" VerticalOptions="End"  Grid.ColumnSpan="3" Grid.Row="1" Text="saddsasd" FontSize="20" Margin="0,0,0,-20"/>
+        <Button x:Name="soundButton" Text="Sound" Grid.Row="2" Grid.Column="0" Style="{StaticResource CircularButtonStyle}" Margin="0,90,0,0" Clicked="OnSoundButtonClicked"/>
+        <Button x:Name="pauseButton" Text="Pause" Grid.Row="2" Grid.Column="1" Style="{StaticResource mainCircularButtonStyle}" Margin="0,90,0,0" Clicked="OnPauseButtonClicked" />
+        <Button x:Name="skipButton" Text="Skip" Grid.Row="2" Grid.Column="2" Style="{StaticResource CircularButtonStyle}" Margin="0,90,0,0" Clicked="OnSkipButtonClicked"/>
+        <StackLayout x:Name="countDownLayout" BackgroundColor="AliceBlue" Grid.RowSpan="3" Grid.ColumnSpan="3">
+            <Label x:Name="countdownLabel" HorizontalOptions="Center" Margin="0,300,0,0" FontSize="50"  Grid.RowSpan="3" Grid.ColumnSpan="3" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

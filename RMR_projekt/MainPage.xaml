@@ -1,0 +1,50 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMR_projekt.MainPage">
+
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="backround.jpg" />
+    </ContentPage.BackgroundImageSource>
+
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Spacing="15" Padding="20">
+
+        <!-- Vadbeni Intervalni Timer Label -->
+        <Label Text="Practice Interval Timer"
+               x:Name="Naslov"
+               FontSize="30"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" />
+
+        <!-- Welcome Label -->
+        <Label Text="Welcome to Your App"
+               x:Name="Welcome"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand" />
+
+        <!-- Log In Button -->
+        <Button Text="Log In"
+                x:Name="LoginBtn"
+                Clicked="Login_Clicked"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="#3498db" 
+                TextColor="White">
+        </Button>
+
+        <!-- Register Button -->
+        <Button Text="Register"
+                x:Name="RegisterBtn"
+                Clicked="Register_Clicked"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="#e74c3c" 
+                TextColor="White">
+        </Button>
+    </StackLayout>
+
+</ContentPage>

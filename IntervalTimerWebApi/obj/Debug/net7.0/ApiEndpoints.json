@@ -1,0 +1,194 @@
+[
+  {
+    "ContainingType": "IntervalTimerWebApi.Program\u002B\u003C\u003Ec",
+    "Method": "\u003CData\u003Eb__1_0",
+    "RelativePath": "trening",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IntervalTimerWebApi.Models.Trening, IntervalTimerWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IntervalTimerWebApi.Program\u002B\u003C\u003Ec",
+    "Method": "\u003CData\u003Eb__1_2",
+    "RelativePath": "trening",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trening",
+        "Type": "IntervalTimerWebApi.Models.Trening",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IntervalTimerWebApi.Program\u002B\u003C\u003Ec",
+    "Method": "\u003CData\u003Eb__1_1",
+    "RelativePath": "trening/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IntervalTimerWebApi.Models.Trening, IntervalTimerWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IntervalTimerWebApi.Program\u002B\u003C\u003Ec",
+    "Method": "\u003CData\u003Eb__1_6",
+    "RelativePath": "uporabnik",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IntervalTimerWebApi.Models.Uporabnik, IntervalTimerWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IntervalTimerWebApi.Program\u002B\u003C\u003Ec",
+    "Method": "\u003CData\u003Eb__1_8",
+    "RelativePath": "uporabnik",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uporabnik",
+        "Type": "IntervalTimerWebApi.Models.Uporabnik",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IntervalTimerWebApi.Program\u002B\u003C\u003Ec",
+    "Method": "\u003CData\u003Eb__1_7",
+    "RelativePath": "uporabnik/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IntervalTimerWebApi.Models.Uporabnik, IntervalTimerWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IntervalTimerWebApi.Program\u002B\u003C\u003Ec",
+    "Method": "\u003CData\u003Eb__1_3",
+    "RelativePath": "vadba",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IntervalTimerWebApi.Models.Vadba, IntervalTimerWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IntervalTimerWebApi.Program\u002B\u003C\u003Ec",
+    "Method": "\u003CData\u003Eb__1_5",
+    "RelativePath": "vadba",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "vadba",
+        "Type": "IntervalTimerWebApi.Models.Vadba",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "IntervalTimerWebApi.Program\u002B\u003C\u003Ec",
+    "Method": "\u003CData\u003Eb__1_4",
+    "RelativePath": "vadba/{id}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[IntervalTimerWebApi.Models.Vadba, IntervalTimerWebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

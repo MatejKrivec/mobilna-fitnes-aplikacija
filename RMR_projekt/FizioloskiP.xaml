@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMR_projekt.FizioloskiP"
+             Title="FizioloskiP">
+
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="pink.jpg" />
+    </ContentPage.BackgroundImageSource>
+
+    <StackLayout>
+
+        <StackLayout Margin="10" HorizontalOptions="Start">
+            <Button x:Name="Backbtn"   HeightRequest="60" WidthRequest="60" Background="Transparent" BackgroundColor="Transparent"  Clicked="BackButton_Clicked"></Button>
+        </StackLayout>
+
+        <!-- Gender Picker -->
+        <Picker Margin="10" HorizontalTextAlignment="Center"  x:Name="genderPicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Male</x:String>
+                    <x:String>Female</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <!-- Height Slider -->
+        <Label Margin="10" HorizontalOptions="Center" x:Name="heightLabel" Text="Height: 160 cm" />
+        <Slider x:Name="heightSlider" Minimum="100" Maximum="220" Value="160" ValueChanged="OnHeightValueChanged" />
+
+        <!-- Weight Slider -->
+        <Label Margin="10" HorizontalOptions="Center" x:Name="weightLabel" Text="Weight: 70 kg" />
+        <Slider x:Name="weightSlider" Minimum="40" Maximum="200" Value="70" ValueChanged="OnWeightValueChanged" />
+
+
+        <Button Margin="30" x:Name="SaveBtn" Text="Save" Clicked="OnSaveClicked" />
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RMR_projekt.ZgodovinaPage"
+             Title="ZgodovinaPage">
+
+    <ContentPage.BackgroundImageSource>
+        <FileImageSource File="pink.jpg" />
+    </ContentPage.BackgroundImageSource>
+    
+    <Grid
+        RowDefinitions="60, *, 5">
+
+       
+        
+        <Label
+            x:Name="Zgodovina"
+            Grid.Row="0"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            FontSize="24"
+            Text="Zgodovina treningov"/>
+
+        <StackLayout  HorizontalOptions="Start">
+            <Button x:Name="Backbtn"   HeightRequest="60" WidthRequest="60" Background="Transparent" BackgroundColor="Transparent"  Clicked="Backbtn_Clicked"></Button>
+        </StackLayout>
+
+        <CollectionView x:Name="trainingCollectionView" ItemsSource="{Binding Treningi}" Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Black">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Column="0"  Grid.Row="0" TextColor="Black" Text="Datum: " />
+                            <Label Grid.Column="1" Grid.Row="0" TextColor="Black" Text="{Binding datum}" />
+
+                            <Label Grid.Column="0" Grid.Row="1" Text="Trajanje: " />
+                            <Label Grid.Column="1" Grid.Row="1" Text="{Binding trajanje}" />
+
+                            <Label Grid.Column="0" Grid.Row="2" Text="Kalorije: " />
+                            <Label Grid.Column="1" Grid.Row="2" Text="{Binding porabljene_kalorije}" />
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>
